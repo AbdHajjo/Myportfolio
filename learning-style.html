@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learning Style and Strategy of Abdalrahman Ahmad Hajjo - Detailed explanation of my approach to learning.">
+  <meta name="keywords" content="Learning Style, Strategy, Abdalrahman Ahmad Hajjo, Education, Computer Science">
+  <title>Learning Style and Strategy | Abdalrahman Ahmad Hajjo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff6b6b;
+    }
+
+    /* Updated Header */
+header {
+  background: linear-gradient(135deg, #6c63ff, #4f4ccd);
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  border-radius: 0 0 15px 15px;
+}
+
+header.scrolled {
+  background: rgba(108, 99, 255, 0.9);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+nav {
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1500;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Responsive Navigation */
+.hamburger {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 250px;
+    background: #6c63ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    width: 100%;
+  }
+}
+
+
+    /* Main Content */
+    .main-content {
+      padding: 40px 15px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .learning-style {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .learning-style h2 {
+      margin-bottom: 20px;
+      color: #6c63ff;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+    }
+
+    .learning-style h3 {
+      color: #6c63ff;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .learning-style p {
+      font-size: 1rem;
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .learning-style ul {
+      list-style: disc;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .learning-style ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+
+      nav ul li {
+        margin: 5px 0;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .learning-style h2 {
+        font-size: 1.6rem;
+      }
+
+      .learning-style h3 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-content {
+        padding: 20px 10px;
+      }
+
+      .learning-style {
+        padding: 15px;
+      }
+
+      .learning-style h2 {
+        font-size: 1.4rem;
+      }
+
+      .learning-style h3 {
+        font-size: 1rem;
+      }
+
+      .learning-style p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+<script>
+  window.onscroll = function () {
+    const header = document.querySelector('header');
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+
+  function toggleMenu() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.classList.toggle('active');
+  }
+</script>
+</head>
+<body>
+<header>
+  <h1>My Portfolio</h1>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav>
+    <ul class="nav-menu">
+      <li><a href="Untitled-1.html">Home</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="Reflection.html">Reflection</a></li>
+      <li><a href="Assignments.html">Assignments</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <div class="main-content">
+    <div class="learning-style">
+      <h2>Learning Style and Strategy</h2>
+
+      <h3>1. Observational Learning</h3>
+      <p>Observation is a core part of my learning process. I believe I learn best by watching others perform tasks, whether it's coding, problem-solving, or collaborating on projects.</p>
+      <ul>
+        <li><strong>Modeling:</strong> I observe experts or peers to learn their techniques and thought processes.</li>
+        <li><strong>Note-taking:</strong> I take detailed notes during observation to reinforce the learning process.</li>
+      </ul>
+
+      <h3>2. Writing as a Reflective Tool</h3>
+      <p>Writing plays a significant role in solidifying the information I gather. Writing also helps me break down complex ideas into more manageable pieces.</p>
+      <ul>
+        <li><strong>Summary Notes:</strong> I summarize key concepts and techniques in my own words.</li>
+        <li><strong>Mindful Journaling:</strong> Writing regularly about my learning helps me reflect on my progress and challenges.</li>
+        <li><strong>Documentation:</strong> For technical learning, I document processes or methods to create a personalized reference guide.</li>
+      </ul>
+
+      <h3>3. Integrating Both Strategies</h3>
+      <p>By combining observational learning and writing, I maximize my learning experience. Writing reinforces content and makes it easier to revisit.</p>
+
+      <h3>4. Reflection and Revision</h3>
+      <p>Rewriting my thoughts helps me refine my understanding and solidifies the knowledge further.</p>
+
+      <h3>5. Continuous Improvement</h3>
+      <p>My learning strategy is about continuous reflection and refinement, ensuring that I stay on top of my learning journey and always strive for improvement.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Abdalrahman Ahmad Hajjo. All rights reserved.</p>
+  </footer>
+</body>
+</html>

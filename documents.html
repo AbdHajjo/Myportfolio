@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documents related to the portfolio of Abdalrahman Ahmad Hajjo - Academic and professional materials.">
+  <meta name="keywords" content="Documents, Portfolio, Abdalrahman Ahmad Hajjo, Computer Science, Academic, Professional">
+  <title>Documents | Abdalrahman Ahmad Hajjo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background: linear-gradient(135deg, #f9f9f9 50%, #e1e8f0 50%);
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff6b6b;
+      transform: scale(1.1);
+    }
+
+    /* Updated Header */
+    header {
+      background: linear-gradient(135deg, #6c63ff, #4f4ccd);
+      color: white;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+      border-radius: 0 0 15px 15px;
+    }
+
+    header.scrolled {
+      background: rgba(108, 99, 255, 0.9);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    .hamburger {
+      display: none;
+      position: absolute;
+      right: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 1500;
+    }
+
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    /* Responsive Navigation */
+    .hamburger {
+      display: none;
+    }
+
+    .nav-menu {
+      display: flex;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        width: 250px;
+        background: #6c63ff;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      .nav-menu.active {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+
+      nav ul li a {
+        width: 100%;
+      }
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .document-section {
+      padding: 20px;
+      background-color: #fff;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .document-section:hover {
+      transform: translateY(-10px);
+    }
+
+    .document-section h2 {
+      margin-bottom: 15px;
+      color: #6c63ff;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .document-section p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+
+    /* Skill Links Style */
+    .document-section a {
+      display: block; /* Make link a block element */
+      text-align: center; /* Center the text */
+      color: rgba(108, 99, 255, 0.9); /* Set color to purple */
+      margin-top: 10px; /* Add some space above the link */
+      transition: color 0.3s ease;
+    }
+
+    .document-section a:hover {
+      color: #ff6b6b; /* Change color on hover */
+    }
+
+    /* Skills Section */
+    .skills-section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-item {
+      cursor: pointer;
+      margin: 10px 0;
+      padding: 10px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s;
+    }
+
+    .skill-item:hover {
+      background: #e1e8f0;
+    }
+
+    .skill-details {
+      display: none;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 15px 15px 0 0;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    window.onscroll = function () {
+      const header = document.querySelector('header');
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    };
+
+    function toggleMenu() {
+      const navMenu = document.querySelector('.nav-menu');
+      navMenu.classList.toggle('active');
+    }
+
+    function toggleSkillDetails(event) {
+      const details = event.currentTarget.querySelector('.skill-details');
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="Untitled-1.html">Home</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="Reflection.html">Reflection</a></li>
+        <li><a href="Assignments.html">Assignments</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <h1>Job Seeking Documents</h1>
+    
+    <div class="document-section">
+      <h2>Professional Development Plan</h2>
+      <p>Download or view my professional development plan outlining my career goals, skills, and strategies for growth.</p>
+      <a href="pers.html" target="_blank">Click</a>
+    </div>
+
+    <div class="document-section">
+      <h2>Curriculum Vitae (CV)</h2>
+      <p>Download or view my CV to learn more about my qualifications, experience, and career objectives.</p>
+      <a href="cv.html" target="_blank">Click</a>
+    </div>
+
+    <div class="document-section">
+      <h2>Cover Letter Sample</h2>
+      <p>Download or view a sample cover letter I created for job applications in the tech industry.</p>
+      <a href="CL.html" target="_blank">Click</a>
+    </div>
+
+    <div class="main-content" id="skills">
+      <h1>Skills</h1>
+      <p>Click on a skill to expand for more details:</p>
+      
+      <div class="skills-section">
+        <div class="skill-item" onclick="toggleSkillDetails(event)">
+          <div class="skill-icon">💻</div>
+          <strong>Programming Languages</strong>
+          <div class="skill-details">
+            Proficient in Java, Python, and JavaScript, acquired through coursework and personal projects.
+          </div>
+        </div>
+        
+        <div class="skill-item" onclick="toggleSkillDetails(event)">
+          <div class="skill-icon">🌐</div>
+          <strong>Web Development</strong>
+          <div class="skill-details">
+            Experienced in HTML, CSS, and frameworks like React and Node.js, gained from building personal websites and applications.
+          </div>
+        </div>
+        
+        <div class="skill-item" onclick="toggleSkillDetails(event)">
+          <div class="skill-icon">📊</div>
+          <strong>Data Analysis</strong>
+          <div class="skill-details">
+            Skilled in using tools like Excel and Python libraries (Pandas, NumPy) for data manipulation.
+          </div>
+        </div>
+        
+        <div class="skill-item" onclick="toggleSkillDetails(event)">
+          <div class="skill-icon">🤝</div>
+          <strong>Soft Skills</strong>
+          <div class="skill-details">
+            Strong communication, teamwork, and problem-solving abilities developed through group projects and presentations.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Abdalrahman Ahmad Hajjo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
